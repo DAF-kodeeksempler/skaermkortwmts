@@ -28,7 +28,7 @@ var map = new Map({
 		type: 'base',
 		visible: true, 
 		source: new WMTS({
-			url: "https://services.datafordeler.dk/Dkskaermkort/topo_skaermkort_wmts/1.0.0/wmts?username=KEXVKJDPAA&password=DAFTest777!",
+			url: "https://services.datafordeler.dk/Dkskaermkort/topo_skaermkort_wmts/1.0.0/wmts?username=USERNAME&password=PASSWORD",
 			layer: "topo_skaermkort",
 			matrixSet: "View1",
 			format: "image/jpeg",
