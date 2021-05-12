@@ -22,7 +22,7 @@ const dfTileGrid = new WMTSTileGrid({
 })
 
 var map = new Map({
-	target: 'map',
+	target: 'map-id',
 	layers: [new LayerTile({ 
 		title: 'Skærmkort (DAF)',
 		type: 'base',

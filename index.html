@@ -3,9 +3,57 @@
 
   <head>
     <style>
-      .map {
-        height: 400px;
+      html {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      *, *:before, *:after {
+        -webkit-box-sizing: inherit;
+        -moz-box-sizing: inherit;
+        box-sizing: inherit;
+      }
+
+      html, body {
+        height: 100%;  
+        padding: 0;
+        margin: 0;
+        display: block;
+      }
+
+      .container {
+      height: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      }
+
+      .header {
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 auto;
+                flex: 0 0 auto;
+        padding: 0 1rem;
+      }
+
+      .map-container {
+        height: 100%;
+        padding: 0px 1rem 1rem 1rem;
+        padding: 0px 1vmin 1vmin 1vmin;
+      }
+
+      .map-frame {
+        height: 100%;
         width: 100%;
+        outline: 1px solid black;
+      }
+
+      #map-id { 
+        height: 100%;
       }
     </style>
     
@@ -13,8 +61,16 @@
   </head>
 
   <body>
-    <h2>WMTS Skærmkort fra Datafordeleren</h2>
-    <div id="map" class="map"></div>    
+    <div class="container">
+      <div class="header">
+        <h2>WMTS Skærmkort fra Datafordeleren</h2>
+      </div>
+      <div class="map-container">
+        <div class="map-frame">  
+          <div id="map-id"></div>
+        </div>
+      </div>
+    </div>   
   </body>  
   
   <script src="./js/index.js"></script>
